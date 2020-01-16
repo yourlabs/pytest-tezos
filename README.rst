@@ -11,3 +11,7 @@ Install with pip, ie::
 
     pip install -e git+http://gitlab.com/jpic/pytest-ligo.git#egg=pytest-tezos
     pip install -e git+http://gitlab.com/jpic/pytest-ligo.git#egg=pytest-ligo
+
+Run an auto baking sandbox::
+
+    docker run -p 8732:8732 yourlabs/tezos
