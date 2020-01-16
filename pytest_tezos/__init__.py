@@ -23,6 +23,7 @@ class Tezos:
                 key=key,
                 shell=f'http://{host}:8732',
             ))
+        self.client = self.clients[0]
 
     def wait(self, origination):
         import time
