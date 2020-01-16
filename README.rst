@@ -11,8 +11,8 @@ Install with pip, ie::
 
 Test is example usage:
 
-.. litteralinclude:: test_pytest_tezos.py
+.. literalinclude:: test_pytest_tezos.py
 
 Along with .gitlab-ci.yml configuration to adapt to your own use:
 
-.. litteralinclude:: test_pytest_tezos.py
+.. literalinclude:: test_pytest_tezos.py
