@@ -17,9 +17,10 @@ class Tezos:
         for i in sandbox_ids:
             key = pytezos.key.from_encoded_key(i)
             self.addresses.append(key.public_key_hash())
+            host = 'tz' if os.getenv('CI') else 'localhost'
             self.clients.append(pytezos.using(
                 key=key,
-                shell='http://localhost:8732',
+                shell=f'http://{host}:8732',
             ))
 
     def wait(self, origination):
