@@ -1,0 +1,12 @@
+image: yourlabs/python
+
+pytest:
+  stage: test
+  script: env
+  services:
+  - name: yourlabs/tezos
+    alias: tz
+
+pypi:
+  stage: deploy
+  script: pypi-release

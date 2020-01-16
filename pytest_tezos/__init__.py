@@ -22,6 +22,22 @@ class Tezos:
                 shell='http://localhost:8732',
             ))
 
+    def wait(self, origination):
+        import time
+        tries = 15
+        while tries:
+            try:
+                return self.clients[0].shell.blocks[-5:].find_operation(origination['hash'])
+            except:
+                time.sleep(1)
+                tries -= 1
+                if not tries:
+                    raise
+
+    def contract_address(self, origination):
+        result = self.wait(origination)['contents'][0]['metadata']['operation_result']
+        return result['originated_contracts'][0]
+
 
 @pytest.fixture
 def tezos():
