@@ -6,6 +6,9 @@ def test_tezos(tezos):
     assert tezos.clients[0]
     cli = tezos.clients[0]
 
+    for i in range(0, 4):
+        assert tezos.clients[i].balance() > 10
+
 
 def test_types():
     assert Nat(0).compile() == '0n'
