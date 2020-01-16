@@ -2,7 +2,9 @@ image: yourlabs/python
 
 pytest:
   stage: test
-  script: py.test -v
+  script:
+  - pip install .
+  - py.test -v
   services:
   - name: yourlabs/tezos
     alias: tz
