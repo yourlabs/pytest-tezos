@@ -2,16 +2,14 @@ pytest-ligo
 ~~~~~~~~~~~
 
 Py.test plugin which adds a tezos fixture to encapsulate boilerplate business
-logic.
-
-- ``test_pytest_tezos.py``: example usage,
-- ``.gitlab-ci.yml``: to adapt to your own use.
+logic. Refer to ``test_pytest_tezos.py`` for example usage.
 
 Install with pip, ie::
 
-    pip install -e git+http://gitlab.com/jpic/pytest-ligo.git#egg=pytest-tezos
-    pip install -e git+http://gitlab.com/jpic/pytest-ligo.git#egg=pytest-ligo
+    pip install pytest-tezos
 
-Run an auto baking sandbox::
+Run an auto baking sandbox on localhost::
 
     docker run -p 8732:8732 yourlabs/tezos
+
+For CI configuration, refer to ``.gitlab-ci.yml``.
