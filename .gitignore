@@ -1,0 +1,6 @@
+.contract.mligo.swp
+.eggs/
+__pycache__/
+pytest_tezos.egg-info/
+
+
