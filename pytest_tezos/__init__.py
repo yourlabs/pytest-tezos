@@ -26,6 +26,9 @@ class Tezos:
         self.client = self.clients[0]
 
     def wait(self, origination):
+        if type(origination).__name__ == 'ContractCall':
+            origination = origination.inject()
+
         import time
         tries = 15
         while tries:
